@@ -16,13 +16,15 @@ class FileIO
 {
     private:
         int ierr = 0;
+        Mesh m;
         std::ifstream file;
         std::string fileName;
-    public:
-        FileIO(std::string s, Mesh m);
-        ~FileIO();
         void openGeoDat(std::string s);
-        void readGeoDat(Mesh m);
+        void readGeoDat();
+    public:
+        FileIO(std::string s);
+        ~FileIO();
+        Mesh getMesh();
         int getIerr();
 };
 

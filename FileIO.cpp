@@ -1,9 +1,9 @@
 #include "FileIO.h"
 
-FileIO::FileIO(std::string s, Mesh m)
+FileIO::FileIO(std::string s)
 {
     openGeoDat(s);
-    readGeoDat(m);
+    readGeoDat();
 }
 
 FileIO::~FileIO()
@@ -23,7 +23,7 @@ void FileIO::openGeoDat(std::string s)
     }
 }
 
-void FileIO::readGeoDat(Mesh m)
+void FileIO::readGeoDat()
 {
     std::string line;
     std::streampos start, end, current;
@@ -99,6 +99,11 @@ void FileIO::readGeoDat(Mesh m)
         }
         m.buildElementsList(eID-1, auxPoints);
     }
+}
+
+Mesh FileIO::getMesh()
+{
+    return m;
 }
 
 int FileIO::getIerr()
