@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <cstdint>
+#include <cmath>
 #include "Point.h"
 
 class Element
@@ -12,6 +13,8 @@ class Element
         uint64_t elementID;
         uint64_t elementNumNodes;
         uint64_t elementType;
+        std::vector<double> elementWgp;
+        std::vector<double> elementXgp;
         std::vector<Point> elementNodes;
     public:
         // Constructor
