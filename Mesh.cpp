@@ -26,7 +26,7 @@ Point Mesh::getMeshNodeFromID(uint64_t id)
 {
     for (uint64_t i = 0; i < meshNumNodes; i++)
     {
-        if (meshNodes[i].getNodeID() == id)
+        if (meshNodes[i].getPointID() == id)
         {
             return meshNodes[i];
         }
