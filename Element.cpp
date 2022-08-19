@@ -5,7 +5,7 @@ Element::Element(uint64_t n, std::vector<Point> p)
     elementID = n;
     elementNodes = p;
     elementNumNodes = elementNodes.size();
-    elementType = (10*elementNumNodes)+elementNodes[0].getNodeDims();
+    elementType = (10*elementNumNodes)+elementNodes[0].getPointDims();
 }
 
 Element::~Element()

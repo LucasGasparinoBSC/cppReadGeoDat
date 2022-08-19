@@ -16,12 +16,12 @@ class Point
         // Destructor
         ~Point();
         // Getters
-        uint64_t getNodeID();
-        uint64_t getNodeDims();
-        std::vector<double> getNodeXYZ();
+        uint64_t getPointID();
+        uint64_t getPointDims();
+        std::vector<double> getPointXYZ();
         // Setters
-        void setNodeID(uint64_t n);
-        void setNodeXYZ(std::vector<double> c);
+        void setPointID(uint64_t n);
+        void setPointXYZ(std::vector<double> c);
 };
 
 #endif // !POINT_H

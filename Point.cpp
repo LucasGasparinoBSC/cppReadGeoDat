@@ -16,29 +16,29 @@ Point::~Point()
 }
 
 // Getters
-uint64_t Point::getNodeID()
+uint64_t Point::getPointID()
 {
     return nodeID;
 }
 
-uint64_t Point::getNodeDims()
+uint64_t Point::getPointDims()
 {
     return nodeDims;
 }
 
-std::vector<double> Point::getNodeXYZ()
+std::vector<double> Point::getPointXYZ()
 {
     return nodeXYZ;
 }
 
 // Setters
 
-void Point::setNodeID(uint64_t n)
+void Point::setPointID(uint64_t n)
 {
     nodeID = n;
 }
 
-void Point::setNodeXYZ(std::vector<double> c)
+void Point::setPointXYZ(std::vector<double> c)
 {
     nodeXYZ = c;
 }
